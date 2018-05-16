@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +15,53 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkBlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="KjF-WX-hdl">
+                                <rect key="frame" x="0.0" y="-79" width="414" height="881"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="881" id="Usf-b5-xGh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3c-FO-UlV">
+                                <rect key="frame" x="121" y="214" width="173" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ike-ub-thW">
+                                <rect key="frame" x="60" y="342" width="294" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KjF-WX-hdl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2q5-he-mMV"/>
+                            <constraint firstItem="r3c-FO-UlV" firstAttribute="centerX" secondItem="ike-ub-thW" secondAttribute="centerX" id="2um-wx-NZW"/>
+                            <constraint firstItem="r3c-FO-UlV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="194" id="5hH-oT-Ceg"/>
+                            <constraint firstItem="ike-ub-thW" firstAttribute="top" secondItem="r3c-FO-UlV" secondAttribute="bottom" constant="8" id="6EN-K7-qG1"/>
+                            <constraint firstItem="ike-ub-thW" firstAttribute="leading" secondItem="r3c-FO-UlV" secondAttribute="trailing" constant="-234" id="AmE-g4-hD3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="KjF-WX-hdl" secondAttribute="bottom" constant="-782" id="EXf-00-Su4"/>
+                            <constraint firstItem="ike-ub-thW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="JZx-xV-24h"/>
+                            <constraint firstItem="KjF-WX-hdl" firstAttribute="top" secondItem="r3c-FO-UlV" secondAttribute="bottom" constant="-413" id="Lrw-KH-22E"/>
+                            <constraint firstItem="KjF-WX-hdl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-414" id="Rqn-XW-EDN"/>
+                            <constraint firstItem="r3c-FO-UlV" firstAttribute="leading" secondItem="KjF-WX-hdl" secondAttribute="trailing" constant="-293" id="TZi-6j-ZcQ"/>
+                            <constraint firstItem="r3c-FO-UlV" firstAttribute="centerX" secondItem="KjF-WX-hdl" secondAttribute="centerX" id="ZPX-GI-ZDI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ike-ub-thW" secondAttribute="bottom" constant="274" id="kDA-ny-Rgd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KjF-WX-hdl" secondAttribute="bottom" constant="-66" id="sSu-6E-yF8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="darkBlueBG" width="414" height="736"/>
+    </resources>
 </document>
