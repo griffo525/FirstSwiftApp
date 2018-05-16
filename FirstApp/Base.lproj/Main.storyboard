@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,86 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkBlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-zU-hv0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="812" id="hzm-CE-WXb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvZ-V7-92G">
+                                <rect key="frame" x="149" y="295" width="76" height="76"/>
+                                <state key="normal" image="powerButton"/>
+                                <connections>
+                                    <action selector="powerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npW-0w-msm"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6h-Ab-Na2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocketAndStream" translatesAutoresizingMaskIntoConstraints="NO" id="wKW-c3-voq">
+                                        <rect key="frame" x="4" y="529" width="367" height="349"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloudsAndOrangeOval" translatesAutoresizingMaskIntoConstraints="NO" id="Hym-x2-BRf">
+                                        <rect key="frame" x="0.0" y="359" width="375" height="465"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG6-6k-Gzb">
+                                        <rect key="frame" x="124" y="606" width="127" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="86"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HUSTLE MODE: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDH-7e-bSI">
+                                        <rect key="frame" x="81" y="517" width="213" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.46274509803921571" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="centerY" secondItem="DvZ-V7-92G" secondAttribute="centerY" constant="73" id="1Wt-0g-fnM"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="349-e4-PjP"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9dS-cz-Vom"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="leading" secondItem="a6h-Ab-Na2" secondAttribute="leading" id="BsN-q9-9wk"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="top" secondItem="a6h-Ab-Na2" secondAttribute="top" id="Pzl-bw-BFf"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="bottom" secondItem="a6h-Ab-Na2" secondAttribute="bottom" constant="145" id="lZ7-dc-Pdh"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="nuc-Mx-VvM"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="trailing" secondItem="a6h-Ab-Na2" secondAttribute="trailing" id="sUK-lO-GAT"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="centerX" secondItem="DvZ-V7-92G" secondAttribute="centerX" id="wvC-OG-UPc"/>
+                            <constraint firstItem="hb0-zU-hv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zrU-Ap-aMB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cloudHolder" destination="a6h-Ab-Na2" id="LKA-mm-oi4"/>
+                        <outlet property="darkblueBG" destination="hb0-zU-hv0" id="mOH-Mk-qNz"/>
+                        <outlet property="husterLbl" destination="YDH-7e-bSI" id="rMJ-0H-uSN"/>
+                        <outlet property="onLbl" destination="kG6-6k-Gzb" id="kNY-zC-0AB"/>
+                        <outlet property="powerBtn" destination="DvZ-V7-92G" id="2sH-CJ-2n2"/>
+                        <outlet property="rocket" destination="wKW-c3-voq" id="jUn-kR-tpa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudsAndOrangeOval" width="414" height="477"/>
+        <image name="darkBlueBG" width="414" height="736"/>
+        <image name="powerButton" width="96" height="96"/>
+        <image name="rocketAndStream" width="414" height="672"/>
+    </resources>
 </document>
